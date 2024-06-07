@@ -1,0 +1,27 @@
+$body-background-color: #010101;
+$accent-text-color: #fff;
+
+%KaiseiOpti-400 {
+  font-family: 'KaiseiOpti', sans-serif;
+  font-weight: 400;
+}
+
+%KaiseiOpti-500 {
+  font-family: 'KaiseiOpti', sans-serif;
+  font-weight: 500;
+}
+
+%KaiseiOpti-700 {
+  font-family: 'KaiseiOpti', sans-serif;
+  font-weight: 700;
+}
+
+%bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+%btn-border {
+  border: 2px solid $accent-text-color;
+}

@@ -9,10 +9,10 @@ body {
 
   font-size: 20px;
   line-height: 1.5;
-  // @extend %rubik-400;
+  @extend %KaiseiOpti-400;
 
-  // color: $accent-text-color;
-  // background-color: $body-background-color;
+  color: $accent-text-color;
+  background-color: $body-background-color;
 }
 
 .sr-only {
@@ -33,7 +33,37 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1950px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.title {
+  font-size: 80px;
+  margin-bottom: 50px;
+}
+
+.section {
+  padding: 135px 0;
+}
+
+.portaolio-img {
+  transition: background-image 0.5s;
+}
+
+.swiper-horizontal>.swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-horizontal {
+  width: 135px;
+  height: var(--swiper-pagination-progressbar-size, 2px);
+  bottom: 0;
+  top: auto;
+  left: 0;
+  background-color: $accent-text-color;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  height: 12px;
+  top: -5px;
+  background-color: $accent-text-color;
+  transform: translateY(-50%);
 }

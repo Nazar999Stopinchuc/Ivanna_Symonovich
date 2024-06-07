@@ -5,6 +5,407 @@
 @import 'libs';
 @import 'global';
 
+.header {
+  height: 100vh;
+  @extend %bg;
 
+  &__bottum {
+    height: calc(100vh - 220px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 80px;
+  }
 
+  &__social {
+    position: absolute;
+    right: 40px;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-top: 95px;
+  }
 
+  &__top-line {
+    width: 2px;
+    height: 100%;
+  }
+
+  &__bottum-line {
+    width: 2px;
+    height: 200px;
+  }
+
+  &__social-svg {
+    fill: $accent-text-color;
+    height: 44px;
+    width: 44px;
+  }
+
+  &__title {
+    font-size: 50px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 80px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 40px;
+    margin-bottom: 60px;
+    max-width: 635px;
+  }
+
+  &__sign-up {
+    font-size: 24px;
+    @extend %KaiseiOpti-700;
+    padding: 10px 50px;
+    @extend %btn-border;
+  }
+
+  &__showe-more {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    font-size: 24px;
+    padding-bottom: 30px;
+  }
+
+  &__arrow-svg {
+    fill: $accent-text-color;
+    height: 25px;
+    width: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 220px;
+  padding: 35px 80px 0 0;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  &__link {
+    font-size: 40px;
+    line-height: 1.3;
+    @extend %KaiseiOpti-700;
+  }
+}
+
+.portfolio {
+
+  &__wrap {
+    display: flex;
+    gap: 30px;
+    grid-template-columns: 3fr 2fr;
+    margin-bottom: 35px;
+  }
+
+  &__control {
+    display: flex;
+    gap: 65px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $accent-text-color;
+  }
+
+  &__control-btn {
+    font-size: 40px;
+    cursor: pointer;
+    position: relative;
+
+    &--active {
+      &::after {
+        content: "";
+        position: absolute;
+        height: 12px;
+        background-color: $accent-text-color;
+        width: 100%;
+        left: 0;
+        bottom: -15px;
+      }
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__photos {
+    display: grid;
+    gap: 30px;
+    grid-template-areas: 'a a' 'b c';
+    grid-template-rows: 390px 390px;
+  }
+
+  &__photos-item {
+    @extend %bg;
+
+    &:nth-child(1) {
+      grid-area: a;
+    }
+
+    &:nth-child(2) {
+      grid-area: b;
+    }
+
+    &:nth-child(3) {
+      grid-area: c;
+    }
+  }
+
+  &__main-photo {
+    width: 625px;
+    @extend %bg;
+  }
+
+  &__load-more {
+    position: relative;
+    font-size: 24px;
+    border-bottom: 1px solid $accent-text-color;
+  }
+
+  &__arrow-svg {
+    position: absolute;
+    right: -35px;
+    top: 8px;
+    fill: $accent-text-color;
+    transform: rotateZ(-90deg);
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.pricing {
+  &__list {
+    display: flex;
+    border-top: 2px solid $accent-text-color;
+    border-bottom: 2px solid $accent-text-color;
+  }
+
+  &__item {
+    flex-shrink: 1;
+    width: 33%;
+    position: relative;
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: -10%;
+        right: 0;
+        width: 2px;
+        height: 120%;
+        background-color: $accent-text-color;
+      }
+    }
+  }
+}
+
+.price-card {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 50px 0 160px 0;
+  position: relative;
+
+  &__title {
+    font-size: 65px;
+    margin-bottom: 50px;
+  }
+
+  &__description {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  &__numb {
+    display: block;
+    text-align: end;
+    margin-bottom: 15px;
+    font-size: 35px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+  }
+
+  &__sign-up {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    font-size: 24px;
+    padding: 10px 50px;
+    @extend %btn-border;
+  }
+}
+
+.reviews {
+
+  &__slide {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__content {
+    max-width: 705px;
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__user-name {
+    @extend %KaiseiOpti-700;
+    display: block;
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+
+  &__line {
+    height: 2px;
+    background-color: $accent-text-color;
+    width: 100%;
+  }
+
+  &__text {
+    position: relative;
+    font-style: italic;
+    font-size: 33px;
+  }
+
+  &__photos {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: 515px;
+    flex-grow: 1;
+    object-fit: cover;
+  }
+}
+
+.contacts {
+  border-top: 2px solid $accent-text-color;
+  font-size: 40px;
+  @extend %KaiseiOpti-700;
+
+  &__img {
+    object-fit: cover;
+    box-shadow: 30px -30px 0px 0px #6A6A6B;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+  }
+
+  &__content {
+    max-width: 1015px;
+  }
+
+  &__text {
+    font-size: 40px;
+    @extend %KaiseiOpti-700;
+    margin-bottom: 15px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__info-wrap {
+    max-width: 90%;
+  }
+  
+  &__link {
+    display: inline-block;
+    position: relative;
+    padding-left:60px;
+    margin-bottom: 75px;
+  }
+
+  &__svg {
+    position: absolute;
+    left: 0;
+    stroke: $accent-text-color;
+    height: 44px;
+    width: 44px;
+  }
+
+}
+
+.form {
+  max-width: 585px;
+  font-size: 40px;
+  @extend %KaiseiOpti-700;
+
+  &__inner {
+    padding-bottom: 100px;
+  }
+
+  &__input {
+    border-bottom: 2px solid $accent-text-color;
+    margin-bottom: 80px;
+    width: 100%;
+    background-color: transparent;
+    color: $accent-text-color;
+
+    &::placeholder {
+      color: $accent-text-color;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 10px;
+    @extend %btn-border;
+    margin-bottom: 20px;
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__svg {
+    fill: $accent-text-color;
+    height: 44px;
+    width: 44px;
+  }
+
+  &__send-result {
+    margin-bottom: auto;
+  }
+}
