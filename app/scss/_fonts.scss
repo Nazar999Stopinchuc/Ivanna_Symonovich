@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'KaiseiOpti';
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url('../fonts/KaiseiOpti-Regular.woff') format('woff2'),
+    url('../fonts/KaiseiOpti-Regular.woff2') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KaiseiOpti';
+  font-weight: 500;
+  font-style: italic;
+  src:
+    url('../fonts/KaiseiOpti-Medium.woff') format('woff2'),
+    url('../fonts/KaiseiOpti-Medium.woff2') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KaiseiOpti';
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url('../fonts/KaiseiOpti-Bold.woff') format('woff2'),
+    url('../fonts/KaiseiOpti-Bold.woff2') format('woff');
+  font-display: swap;
+}
